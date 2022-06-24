@@ -1,0 +1,1302 @@
+<!-- 06/01/2022 Added Hyflex to Class Search for College - VD -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=yes" name="viewport">
+    <title>SDCCD Online Class Search</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+          type="text/css">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/datetime/1.1.2/css/dataTables.dateTime.min.css" rel="stylesheet">
+    <link href="css/bootstrap4.group.css" rel="stylesheet">
+    <!-- /global stylesheets -->
+
+    <!-- Local stylesheets-->
+    <link href="css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="css/layout.min.css" rel="stylesheet" type="text/css">
+    <link href="css/components.min.css" rel="stylesheet" type="text/css">
+    <link href="css/datepicker.min.css" rel="stylesheet">
+    <!-- /Local Stylesheets-->
+
+    <!-- Edit This-->
+    <link href="css/clssearch.css" rel="stylesheet">
+
+    <!--/end Edit CSS-->
+    <!--Google Analytics-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150230026-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-150230026-4');
+    </script>
+
+    <!--end google analytics-->
+
+</head>
+
+<body>
+
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-dark bg-sdccd navbar-static">
+    <div class="navbar-brand">
+        <a class="d-inline-block" href="https://www.sdccd.edu">
+            <img alt=""
+                 src="https://www.sdccd.edu/about/departments-and-offices/communications-and-public-relations/images/logos/sdccd2017logoweb.png">
+        </a>
+    </div>
+    <div class="collapse navbar-collapse flex-column" id="navbar-mobile">
+
+
+        <ul class="navbar-nav ml-auto small">
+
+
+            <li><a class="navbar-nav-link" href="http://classschedule.sdccd.edu" title="Class Schedule">Class
+                Schedule</a></li>
+            <li><a class="navbar-nav-link" href="https://mail.sdccd.edu/owa/#path=/mail/" target="_blank"
+                   title="Employee Email">Employee Email</a></li>
+            <!--<li><a href="#">Sitemap</a></li>-->
+            <li><a class="navbar-nav-link" href="/about/directories.aspx"
+                   title="Directories - List of district departments">Directories</a></li>
+            <li><a class="navbar-nav-link" href="https://www.boarddocs.com/ca/sdccd/Board.nsf/Public"
+                   title="Board Meeting Agenda">Board Meeting Agenda</a></li>
+
+            <li class="nav-item dropdown dropdown-user">
+                <a class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+                   href="#">
+                    <span>Quicklinks</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+
+                    <a class="dropdown-item" href="/imagine/" title="Enroll, register">Enroll/Register</a>
+                    <a class="dropdown-item"
+                       href="/about/departments-and-offices/student-services-department/promise/" target="_blank"
+                       title="San Diego Promise">San Diego Promise</a>
+                    <a class="dropdown-item" href="/about/departments-and-offices/"
+                       title="Departments and Offices">Departments and Offices</a>
+                    <a class="dropdown-item"
+                       href="/about/departments-and-offices/communications-and-public-relations/chancellor_search/index.aspx"
+                       target="_blank" title="Chancellor Search">Chancellor Search</a>
+                    <a class="dropdown-item"
+                       href="/about/departments-and-offices/business-technology-services-division/business-support-services/purchasing-vendors/index.aspx"
+                       title="Doing Business with SDCCD">Doing
+                        Business with SDCCD</a>
+                    <a class="dropdown-item" href="/students/titleix.aspx" title="Title 9 and Clery Act">Title
+                        IX/Clery Act</a>
+                    <!--<li><a href="https://mail.sdccd.edu/owa/#path=/mail/owa/auth/logon.aspx" target="_blank">Employee Email</a></li>-->
+                    <a class="dropdown-item" href="https://sdccd.instructure.com/login/canvas"
+                       title="Canvas Solutions login">Canvas Login</a>
+                    <a class="dropdown-item" href="https://www.sdccdjobs.com/" target="_blank"
+                       title="Jobs at the SDCCD">Jobs at SDCCD</a>
+                </div>
+            </li>
+
+        </ul>
+        <ul class="social-nav ml-auto">
+            <li class="nav-item"><a aria-label="Link to SDCCD on Facebook" href="https://www.facebook.com/sdccd"
+                                    target="_blank"><i aria-hidden="true" class="fa fa-facebook"></i></a>
+            </li>
+            <li class="nav-item"><a aria-label="Link to SDCCD on Twitter" href="https://twitter.com/SDCCD"
+                                    target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+            <li class="nav-item"><a aria-label="Link to SDCCD on Instagram"
+                                    href="https://www.instagram.com/thesdccd/" target="_blank"><i aria-hidden="true"
+                                                                                                  class="fa fa-instagram"></i></a>
+            </li>
+            <li class="nav-item"><a aria-label="Link to SDCCD on YouTube"
+                                    href="https://www.youtube.com/user/TheSDCCD" target="_blank"><i aria-hidden="true"
+                                                                                                    class="fa fa-youtube-play"></i></a>
+            </li>
+            <li class="nav-item"><a aria-label="Link to SDCCD on LinkedIn"
+                                    href="https://www.linkedin.com/company-beta/165834/" target="_blank"><i aria-hidden="true"
+                                                                                                            class="fa fa-linkedin"></i></a>
+            </li>
+        </ul>
+
+        <!--<li class="nav-item dropdown">
+            <a href="#" class="navbar-nav-link">
+                <i class="icon-bell2"></i>
+                <span class="d-md-none ml-2">Notifications</span>
+                <span class="badge badge-mark border-white ml-auto ml-md-0"></span>
+            </a>
+        </li>-->
+    </div>
+</div>
+<!-- /main navbar -->
+<div class="navbar navbar-expand navbar-light px-0 px-lg-3">
+    <div class="overflow-auto overflow-lg-visible scrollbar-hidden flex-1" style="margin-left:20px;">
+        <ul class="navbar-nav">
+            <li class="nav-item" style="margin-right:30px;margin-top: 0px;">
+                <a href="https://www.sdccd.edu" class="navbar-nav-link">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item" style="margin-right:30px;">
+                <a href="https://www.sdccd.edu/about/index.aspx" class="navbar-nav-link">
+                    About
+                </a>
+            </li>
+            <li class="nav-item" style="margin-right:30px;">
+            <a href="https://www.sdccd.edu/students/index.aspx" class="navbar-nav-link">
+                    Students
+                </a>
+            </li>
+            <li class="nav-item" style="margin-right:30px;">
+            <a href="https://www.sdccd.edu/future-students/index.aspx" class="navbar-nav-link">
+                    Future Students
+                </a>
+            </li>
+            <li class="nav-item" style="margin-right:30px;">
+            <a href="https://www.sdccd.edu/employees/index.aspx" class="navbar-nav-link">
+                    Employees
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="page-content">
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Page header -->
+        <div class="page-header page-header-light">
+            <div class="page-header-content header-elements-md-inline">
+                <div class="page-title d-flex">
+                    <h4><span class="font-weight-semibold">College Class Schedule - <span id="term"></span></span>
+                    </h4>
+                    <a class="header-elements-toggle text-default d-md-none" href="#"><i class="icon-more"></i></a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="card-body">
+            <ul class="nav nav-tabs nav-tabs-solid nav-justified border-0">
+                <li class="nav-item"><a class="nav-link active" href="search.html">College</a></li>
+                <li class="nav-item"><a class="nav-link" href="cesearch.html">Continuing Education</a></li>
+
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="college">
+                    <div class="btn-group btn-group-justified" role="group">
+                        <!-- term selector, will need to update each semester -->
+                        <button class="btn btn-primary" id="term1">Summer 2022
+                        </button>
+                        <button class="btn btn-outline-primary" id="term2">Fall 2022
+                        </button>
+
+
+
+
+                    </div>
+                    <!-- Content area -->
+                    <div class="content">
+
+                        <!-- Basic card -->
+                        <div class="card">
+                            <div class="card-header header-elements-inline">
+                                <h5></h5>
+                                <div class="header-elements">
+                                    <div class="list-icons">
+                                        <a class="list-icons-item" data-action="collapse"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <p>Welcome to our new class search. This information is refreshed as
+                                    noted on the timer below.
+                                    In order to register for classes you must be logged into <a
+                                            href="http://my.sdccd.edu" target="_blank">mySDCCD</a>, and reference the
+                                    Class Nbr when
+                                    you register.
+                                </p>
+
+                                <h5>
+                                    <div style="display:none;">Data refreshes in <span id="time"></span>.</div>
+                                </h5>
+                                <div class="card card-collapsed">
+                                    <div
+                                            class="card-header bg-dark text-white d-flex bg-sdccd justify-content-between">
+                                            <span class="font-size-md text-uppercase font-weight-bold"><a
+                                                    data-action="collapse">How to use the class search</a></span>
+                                        <span class="font-size-sm text-uppercase font-weight-semibold">
+                                                <div class="list-icons">
+                                                    <a class="list-icons-item" data-action="collapse"></a>
+                                                </div>
+                                            </span>
+                                    </div>
+
+                                    <div class="card-body" id="collapse-text">
+                                        <blockquote class="mt-3">
+
+
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <h6 class="card-title">Class Types:</h6>
+                                                    <p>
+                                                        To know more about Class Types, <a
+                                                            href="https://youtu.be/3X5ch5jcvBk"
+                                                            target="_blank">please
+                                                        check out our informative video:
+                                                        https://youtu.be/3X5ch5jcvBk</a>
+                                                    </p>
+                                                    <h6 class="card-title">Class Status Definitions:</h6>
+                                                    <ul>
+                                                        <li><b>Open</b> – Class is open for students to enroll and
+                                                            is
+                                                            before the first day of class.
+                                                        </li>
+                                                        <li><b>Permission # Required</b> – Class is currently in
+                                                            session
+                                                            and requires a permission number to enroll
+                                                        </li>
+                                                        <li><b>Waitlist </b> – Class is full, but has waitlist spots
+                                                            open
+                                                        </li>
+                                                        <li><b>Full</b> – Class is full, and the waitlist has no
+                                                            open
+                                                            spots
+                                                        </li>
+                                                        <li><b>Closed</b> – Add/Drop period has passed</li>
+                                                    </ul>
+                                                    <p><b>Contacting the Instructor:</b> To contact the instructor,
+                                                        click on their name. You may need to set up your default
+                                                        email
+                                                        service/program in order to
+                                                        contact
+                                                        the professor.&nbsp; If you do not have an email program,
+                                                        you
+                                                        can right click on the
+                                                        name
+                                                        and select "Copy Email Address" and paste it into your web
+                                                        email
+                                                        (GMail, Yahoo Mail, Outlook).</p>
+
+                                                </div>
+
+                                                <div class="col-sm">
+                                                    <h4>How to register for classes:</h4>
+                                                    <p>
+                                                        Once you pick the class, click on the class number button
+                                                        <button class="btn btn-outline-primary"><i class="far fa-copy"></i>
+                                                            42122
+                                                        </button>
+                                                        to copy the Class Number to your clipboard.
+
+                                                        Then paste it in the
+                                                        Class Number section in <a href="http://my.sdccd.edu"
+                                                                                   target="_blank">
+                                                        mySDCCD</a>. Be sure you're logged in.
+                                                        <img alt="Picture of mySDCCD Shopping Cart" src="img/regdirect.png">
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <h4>Understanding the&nbsp;difference between 'Web' &amp; 'Remote'
+                                                classes:</h4>
+
+                                            <blockquote>
+
+                                                <p><span style="font-weight: 400;">In the schedule of classes, you
+                                                            will see two different formats of online
+                                                            classes:&nbsp;</span><strong>Web&nbsp;</strong>and&nbsp;<strong>Remote</strong>.
+                                                    <span style="font-weight: 400;">Some classes will use&nbsp;a
+                                                            combination of both <strong>Remote</strong> and
+                                                            <strong>Web</strong> deliveries. See the table below for
+                                                            descriptions of each delivery method.</span>
+                                                </p>
+
+                                                <table class="table table-striped">
+
+                                                    <tbody>
+
+                                                    <tr>
+
+                                                        <th>&nbsp;</th>
+
+                                                        <th>Web</th>
+
+                                                        <th>Remote</th>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td><strong>How will my class&nbsp;be
+                                                            conducted?</strong></td>
+
+                                                        <td>All class work is conducted online through Canvas
+                                                            without a
+                                                            requirement for <strong>real-time/live
+                                                                meetings.&nbsp;</strong></td>
+
+                                                        <td>
+
+                                                            <p>You will meet with your instructor online during
+                                                                <strong>scheduled
+                                                                    class times</strong> via
+                                                                Zoom&nbsp;and&nbsp;Canvas.&nbsp;
+                                                            </p>
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td><strong>What tools will be used in the
+                                                            class?</strong>
+
+                                                            <p>&nbsp;</p>
+
+                                                        </td>
+
+                                                        <td>You will participate with your classmates and
+                                                            instructor in
+                                                            your online classroom
+                                                            (Canvas). Please see your instructor's syllabus for
+                                                            additional information specific&nbsp;to your course.
+                                                        </td>
+
+                                                        <td><span>You will participate with your classmates and
+                                                                        instructor during live online lecture
+                                                                        in Zoom and Canvas. Please see your instructor's
+                                                                        syllabus for additional information
+                                                                        specific&nbsp;to your course.</span>
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td><strong>What can I expect of my instructor?</strong>
+                                                        </td>
+
+                                                        <td>Your instructor will initiate regular and effective
+                                                            contact
+                                                            with students throughout
+                                                            the term through tools in Canvas, regular office
+                                                            hours, etc.&nbsp;
+                                                        </td>
+
+                                                        <td><span>Your instructor will initiate regular and
+                                                                        effective contact with students throughout
+                                                                        the term through scheduled online class
+                                                                        meetings, tools in Canvas, regular office
+                                                                        hours, etc.&nbsp;</span></td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td><strong>What will a combination of Web &amp;
+                                                            Remote
+                                                            look like?</strong></td>
+
+                                                        <td colspan="2"><span><span
+                                                                style="font-weight: 400;">Some class
+                                                                            meetings will be conducted via Canvas/Zoom
+                                                                            during scheduled times. The
+                                                                            remainder of the class will be
+                                                                            Online.</span></span></td>
+
+                                                    </tr>
+
+                                                    </tbody>
+
+                                                </table>
+
+                                            </blockquote>
+                                        </blockquote>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- /basic card -->
+                        <!-- Search Form layouts -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <!-- Horizontal form -->
+
+                                <div class="card">
+                                    <div class="card-header header-elements-inline">
+                                        <h5 class="card-title">Search Criteria</h5>
+                                        <div class="header-elements">
+                                            <div class="list-icons">
+                                                <a class="list-icons-item" data-action="collapse">Collapse</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Type/choose your criteria and click on the "Search" button. You may also
+                                            set
+                                            additional criteria by clicking on "Advanced Filters."
+                                        </p>
+                                        <form name="search" onsubmit="return false">
+                                            <div class="form-group row">
+                                                <label class="col-lg-2 col-form-label"><b>Class Search</b></label>
+                                                <div class="col-lg-5">
+                                                    <input class="form-control" id="txtCoursename"
+                                                           placeholder="Search..." type="text">
+                                                    <span class="form-text text-muted">*For exact search, please use
+                                                            quotes (e.g. "MATH 104").</span>
+
+                                                </div>
+                                                <label class="col-lg col-form-label"
+                                                       for="txtCollege">College</label>
+                                                <div class="col-lg">
+                                                    <select class="form-control" id="txtCollege" name="select">
+                                                        <option value="">All</option>
+                                                        <option value="City">San Diego City College</option>
+                                                        <option value="Mesa">San Diego Mesa College</option>
+                                                        <option value="Mira">San Diego Miramar College</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-lg col-form-label"
+                                                       for="txtSubject">Subject</label>
+                                                <div class="col-lg">
+                                                    <select class="form-control" id="txtSubject" name="select">
+                                                        <option value="">All</option>
+                                                        <option value="ACCT">ACCT - Accounting</option>
+                                                        <option value="ADJU">ADJU - Administration of Justice
+                                                        </option>
+                                                        <option value="AGRI">AGRI - Agriculture</option>
+                                                        <option value="AIRE">AIRE - Air C/Refrig/Envir.Cont.Tech
+                                                        </option>
+                                                        <option value="ALLH">ALLH - Allied Health</option>
+                                                        <option value="AMSL">AMSL - Amer Sign Language/Interpretng
+                                                        </option>
+                                                        <option value="ANHL">ANHL - Animal Health Technology
+                                                        </option>
+                                                        <option value="ANTH">ANTH - Anthropology</option>
+                                                        <option value="AODS">AODS - Alcohol and Other Drug Studies
+                                                        </option>
+                                                        <option value="ARAB">ARAB - Arabic</option>
+                                                        <option value="ARCH">ARCH - Architecture</option>
+                                                        <option value="ARTF">ARTF - Art - Fine Art</option>
+                                                        <option value="ARTG">ARTG - Art - Graphic Design</option>
+                                                        <option value="ASTR">ASTR - Astronomy</option>
+                                                        <option value="AUTO">AUTO - Automotive Technology</option>
+                                                        <option value="AVIA">AVIA - Aviation</option>
+                                                        <option value="AVIM">AVIM - Aviation Maint. Technology
+                                                        </option>
+                                                        <option value="BANK">BANK - Banking and Finance</option>
+                                                        <option value="BCAS">BCAS - Black Contractor's Assoc. Stud
+                                                        </option>
+                                                        <option value="BIOL">BIOL - Biological Sciences</option>
+                                                        <option value="BLAS">BLAS - Black Studies</option>
+                                                        <option value="BLDC">BLDC - Buildg Construction Technolog
+                                                        </option>
+                                                        <option value="BUSE">BUSE - Business</option>
+                                                        <option value="CACM">CACM - Culinary Arts/Culinary Mngmt
+                                                        </option>
+                                                        <option value="CBTE">CBTE - Computer Business Technology
+                                                        </option>
+                                                        <option value="CHEM">CHEM - Chemistry</option>
+                                                        <option value="CHIC">CHIC - Chicana and Chicano Studies
+                                                        </option>
+                                                        <option value="CHIL">CHIL - Child Development</option>
+                                                        <option value="CHIN">CHIN - Chinese</option>
+                                                        <option value="CISC">CISC - Computer and Info Sciences
+                                                        </option>
+                                                        <option value="COMS">COMS - Communication Studies</option>
+                                                        <option value="CONF">CONF - Consumer Studies</option>
+                                                        <option value="COSM">COSM - Cosmetology</option>
+                                                        <option value="CRES">CRES - Conflict Resolution</option>
+                                                        <option value="DANC">DANC - Dance</option>
+                                                        <option value="DENA">DENA - Dental Assisting</option>
+                                                        <option value="DFLM">DFLM - Digital Film Production</option>
+                                                        <option value="DIES">DIES - Diesel Technology</option>
+                                                        <option value="DJRN">DJRN - Digital Journalism</option>
+                                                        <option value="DRAM">DRAM - Dramatic Arts</option>
+                                                        <option value="DSPS">DSPS - Disability Support Prog &amp;
+                                                            Serv
+                                                        </option>
+                                                        <option value="ECON">ECON - Economics</option>
+                                                        <option value="EDUC">EDUC - Education</option>
+                                                        <option value="EGEE">EGEE - Energy and Geo-Enviro Engin
+                                                        </option>
+                                                        <option value="ELAC">ELAC - English Language Acquisition
+                                                        </option>
+                                                        <option value="ELCT">ELCT - Electricity</option>
+                                                        <option value="ELDT">ELDT - Electronic Systems</option>
+                                                        <option value="EMGM">EMGM - Emergency Medical Technician
+                                                        </option>
+                                                        <option value="ENGE">ENGE - Engineering</option>
+                                                        <option value="ENGL">ENGL - English</option>
+                                                        <option value="ENGN">ENGN - Engineering Technology</option>
+                                                        <option value="ESCR">ESCR - Escrow</option>
+                                                        <option value="EXAM">EXAM - Exam Course</option>
+                                                        <option value="EXSC">EXSC - Exercise Science</option>
+                                                        <option value="FASH">FASH - Fashion</option>
+                                                        <option value="FERM">FERM - Fermentation</option>
+                                                        <option value="FILI">FILI - Filipino</option>
+                                                        <option value="FIPT">FIPT - Fire Protection Technology
+                                                        </option>
+                                                        <option value="FREN">FREN - French</option>
+                                                        <option value="GEND">GEND - Gender Studies</option>
+                                                        <option value="GENS">GENS - General Studies</option>
+                                                        <option value="GEOG">GEOG - Geography</option>
+                                                        <option value="GEOL">GEOL - Geology</option>
+                                                        <option value="GERM">GERM - German</option>
+                                                        <option value="GISG">GISG - Geographic Info Systems</option>
+                                                        <option value="GRFX">GRFX - Graphics</option>
+                                                        <option value="HEAL">HEAL - Health Education</option>
+                                                        <option value="HEIT">HEIT - Health Information Technology
+                                                        </option>
+                                                        <option value="HIMS">HIMS - Health Information Management
+                                                        </option>
+                                                        <option value="HIST">HIST - History</option>
+                                                        <option value="HOSP">HOSP - Hospitality</option>
+                                                        <option value="HUMA">HUMA - Humanities</option>
+                                                        <option value="HUMS">HUMS - Human Services</option>
+                                                        <option value="INTE">INTE - Interior Design</option>
+                                                        <option value="INWT">INWT - Info. Network and Web Tech
+                                                        </option>
+                                                        <option value="ITAL">ITAL - Italian</option>
+                                                        <option value="JAPN">JAPN - Japanese</option>
+                                                        <option value="JOUR">JOUR - Journalism</option>
+                                                        <option value="LABR">LABR - Labor Studies</option>
+                                                        <option value="LCOM">LCOM - Learning Community</option>
+                                                        <option value="LIBS">LIBS - Library Science</option>
+                                                        <option value="MACT">MACT - Machine Technology</option>
+                                                        <option value="MARK">MARK - Marketing</option>
+                                                        <option value="MATH">MATH - Mathematics</option>
+                                                        <option value="MEDA">MEDA - Medical Assisting</option>
+                                                        <option value="MFET">MFET - Manufacturing Engineering Tech
+                                                        </option>
+                                                        <option value="MLTT">MLTT - Medical Lab Tech Training
+                                                        </option>
+                                                        <option value="MULT">MULT - Multimedia</option>
+                                                        <option value="MUSC">MUSC - Commercial Music</option>
+                                                        <option value="MUSI">MUSI - Music</option>
+                                                        <option value="NLTE">NLTE - Nursery &amp; Landscape
+                                                            Technology
+                                                        </option>
+                                                        <option value="NRSE">NRSE - Nursing Education</option>
+                                                        <option value="NUTR">NUTR - Nutrition</option>
+                                                        <option value="OCEA">OCEA - Oceanography</option>
+                                                        <option value="PADM">PADM - Public Administration</option>
+                                                        <option value="PARA">PARA - Paralegal</option>
+                                                        <option value="PEAC">PEAC - Peace Studies</option>
+                                                        <option value="PERG">PERG - Personal Growth</option>
+                                                        <option value="PHIL">PHIL - Philosophy</option>
+                                                        <option value="PHLB">PHLB - Phlebotomy</option>
+                                                        <option value="PHOT">PHOT - Photography</option>
+                                                        <option value="PHYN">PHYN - Physical Science</option>
+                                                        <option value="PHYR">PHYR - Physical Therapist Assistant
+                                                        </option>
+                                                        <option value="PHYS">PHYS - Physics</option>
+                                                        <option value="POLI">POLI - Political Science</option>
+                                                        <option value="PSYC">PSYC - Psychology</option>
+                                                        <option value="RADT">RADT - Radiologic Technology</option>
+                                                        <option value="REAL">REAL - Real Estate</option>
+                                                        <option value="RTVF">RTVF - Radio, Television and Film
+                                                        </option>
+                                                        <option value="RUSS">RUSS - Russian</option>
+                                                        <option value="SDGE">SDGE - San Diego Gas and Electric Co
+                                                        </option>
+                                                        <option value="SOCO">SOCO - Sociology</option>
+                                                        <option value="SPAN">SPAN - Spanish</option>
+                                                        <option value="SUST">SUST - Sustainability</option>
+                                                        <option value="TAGA">TAGA - Tagalog</option>
+                                                        <option value="TROL">TROL - San Diego Trolley</option>
+                                                        <option value="VIET">VIET - Vietnamese</option>
+                                                        <option value="VTAH">VTAH - Veterinary Technology</option>
+                                                        <option value="WEBD">WEBD - Web Development</option>
+                                                        <option value="WMNS">WMNS - Women's Studies</option>
+                                                        <option value="WORK">WORK - Work Experience</option>
+                                                    </select>
+                                                </div>
+                                                <label class="col-lg col-form-label" for="txtClass">Class
+                                                    Title</label>
+                                                <div class="col-lg">
+                                                    <select class="form-control" id="txtClass" name="select">
+                                                        <option value="">All</option>
+                                                    </select>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="form-group row">
+
+                                                <label class="col-lg col-form-label" for="txtSession">Session
+                                                </label>
+                                                <div class="col-lg">
+                                                    <select class="form-control" id="txtSession" name="select">
+                                                        <option value="">All Classes</option>
+                                                        <option value="1">Regular (Full Semester)</option>
+                                                        <option value="IN">Intersession (Spring Only)</option>
+                                                        <option value="6W1">First 6-Week Session</option>
+                                                        <option value="6W2">Second 6-Week Session</option>
+                                                        <option value="8W1">First 8-Week Session</option>
+                                                        <option value="8W2">Second 8-Week Session</option>
+                                                        <option value="12W">First 12 Week Session</option>
+                                                        <option value="12E">Second 12 Week Session</option>
+                                                        <option value="14W">First 14 Week Session</option>
+                                                        <option value="14E">Second 14 Week Session</option>
+                                                        <option value="DYN">Short Term Classes - Various Start
+                                                        </option>
+                                                        <option value="DY3">Short Term Classes - Shorter than 3
+                                                            weeks
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <label class="col-lg col-form-label" for="txtStatus">Class
+                                                    Status</label>
+                                                <div class="col-lg">
+                                                    <select class="form-control" id="txtStatus" name="select">
+                                                        <option value="">All Classes</option>
+                                                        <option value="open">Open Classes Only</option>
+                                                        <option value="Available">Waitlist Available</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+
+                                                <label class="col-lg-3 col-form-label">Start Date</label>
+                                                <div class="col-lg-8"><input type="text" id="min" name="min" placeholder="MM/DD/YYYY"> to
+                                                    <input type="text" id="max" name="max" placeholder="MM/DD/YYYY">
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="filter-container">
+
+                                                <div class="panel-collapse collapse" id="filter-body">
+                                                    <div class="panel-body filter-body">
+
+                                                        <div class="card">
+                                                            <div
+                                                                    class="card-header bg-sdccd text-white header-elements-inline">
+                                                                <h6 class="card-title">Advanced Filters</h6>
+                                                                <div class="header-elements">
+                                                                    <div class="list-icons">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card-body">
+
+                                                                <div class="form-group row">
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtClassType">Class Location
+                                                                    </label>
+                                                                    <div class="col-lg-3">
+                                                                        <select class="form-control"
+                                                                                id="txtClassType" name="select">
+                                                                            <option value="">All</option>
+                                                                            <option value="On Campus">On Campus
+                                                                            </option>
+                                                                            <option value="Off Campus">Off Campus
+                                                                            </option>
+                                                                            <option value="Hyflex">Hyflex</option>
+                                                                            <option value="Partially Online">Partially Online
+                                                                            </option>
+                                                                            <option
+                                                                                    value="Online (No Set Meeting Times)">
+                                                                                Fully Online
+                                                                            </option>
+                                                                            <option
+                                                                                    value="Online (Set Meeting Times)">
+                                                                                Online Live
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtClassNumber">Class Number</label>
+                                                                    <div class="col-lg-3">
+                                                                        <input class="form-control"
+                                                                               id="txtClassNumber" maxlength="5"
+                                                                               placeholder="12345..." type="text">
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="form-group row">
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtBooks">Zero Cost Textbooks</label>
+                                                                    <div class="col-lg-3">
+                                                                        <select class="form-control" id="txtBooks"
+                                                                                name="select">
+                                                                            <option value="">All</option>
+                                                                            <option value="FREE">Yes</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtTransfer">Transferable
+                                                                    </label>
+                                                                    <div class="col-lg-3">
+                                                                        <select class="form-control"
+                                                                                id="txtTransfer" name="select">
+                                                                            <option value="">All Classes</option>
+                                                                            <option value="UC">Transferable to UC,
+                                                                                CSU
+                                                                            </option>
+                                                                            <option value="CSU">Transferable to CSU
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="form-group row">
+                                                                    <label class="col-lg col-form-label"
+                                                                           for="txtCatnbr">Catalog Number</label>
+                                                                    <div class="col-lg">
+                                                                        <input class="form-control" id="txtCatnbr"
+                                                                               maxlength="3" placeholder="101..."
+                                                                               type="text">
+                                                                    </div>
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtStart">Start Date
+                                                                    </label>
+                                                                    <div class="col-lg-3">
+                                                                        <input class="datepicker"
+                                                                               data-date-format="mm/dd/yyyy"
+                                                                               id="txtStart">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group row">
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtHonors">Honors
+                                                                    </label>
+                                                                    <div class="col-lg-3">
+                                                                        <select class="form-control" id="txtHonors"
+                                                                                name="select">
+                                                                            <option value="">All Classes</option>
+                                                                            <option value="HNRS">Yes</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtInstructor">Instructor Last
+                                                                        Name</label>
+                                                                    <div class="col-lg-3">
+                                                                        <input class="form-control"
+                                                                               id="txtInstructor"
+                                                                               placeholder="Last Name..." type="text">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-lg-3 col-form-label"
+                                                                           for="txtWPL">Work Based Learning
+                                                                    </label>
+                                                                    <div class="col-lg-9">
+                                                                        <select class="form-control" id="txtWPL"
+                                                                                name="select">
+                                                                            <option value="">---</option>
+                                                                            <option value="Apprenticeship">Apprenticeship</option>
+                                                                            <option value="Capstone Project">Capstone Project</option>
+                                                                            <option value="Clinical Experiences">Clinical Experiences</option>
+                                                                            <option value="Cooperative Work Experience">Cooperative Work Experience</option>
+                                                                            <option value="Research-Basaed-Field_Experience">Research-Based-Field_Experience</option>
+                                                                            <option value="Classroom project w/ Industry Involvement">Classroom project w/ Industry Involvement</option>
+                                                                            <option value="Volunteering/Community Service">Volunteering/Community Service</option>
+                                                                            <option value="Career Fair">Career Fair</option>
+                                                                            <option value="Field Trips">Field Trips</option>
+                                                                            <option value="Career Speaker">Career Speaker</option>
+                                                                            <option value="Mock Interviews">Mock Interviews</option>
+                                                                            <option value="Career Readiness">Career Readiness</option>
+                                                                            <option value="Informational Interviews">Informational Interviews</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                            <div class="text-right">
+                                                <button class="btn btn-primary" id="reset" type="reset"
+                                                        value="reset">Reset Form
+                                                </button>
+                                                <button class="btn btn-primary" data-parent="#accordion"
+                                                        data-toggle="collapse" id="filter-button"><i
+                                                        class="fas fa-filter"></i> Advanced
+                                                    Filters
+                                                </button>
+                                                <button class="btn btn-primary" id="btnSearch" type="submit"><i
+                                                        class="mdi mdi-filter-outline"></i><i
+                                                        class="fas fa-search-location"></i> Search
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /horizotal form -->
+
+                            </div>
+
+
+                        </div>
+                        <!-- /form layouts -->
+
+                        <!-- Basic table -->
+                        <div class="card" id="schedule">
+                            <div class="card-header header-elements-inline">
+                                <h5 class="card-title">Class Schedule</h5>
+                                <div class="header-elements">
+                                    <div class="list-icons">
+                                    </div>
+                                    <form action="#">
+                                        <div class="form-group-feedback form-group-feedback-right">
+                                            <input class="form-control wmin-200" id="searchbox"
+                                                   placeholder="Keyword/Class # Search..." type="search">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-search4 font-size-base text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <b>Legend</b>
+                                    </div>
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="This denotes the class is honors level.  These are regular courses with additional or substitute appropriate learning activities.">
+                                            <i class="fas fa-h-square" aria-hidden="true"></i> Honors Class
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="This class uses no cost textbooks (free).">
+                                            <i class="fab fa-creative-commons-nc"></i> Zero Cost Textbooks
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Hover your mouse to review deadlines related to this class">
+                                            <i class="far fa-calendar-alt" aria-hidden="true"></i> Class Deadlines
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="This class has an in-person instruction.  Students must be fully vaccinated or have an exemption on file.  Please visit https://www.sdccd.edu/students/covid19 for more information.">
+                                            <i class="fas fa-syringe"></i> COVID-19 Vaccination
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="This class has exams on-campus that requires COVID-19 vaccination.">
+                                            <i class="fas fa-edit"></i> In-Person Exams
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Courses with Work-Based Learning (WBL) provide you with activities and projects to explore career pathways and industries, develop professional skills, and connect with employers. WBL activities vary widely from workplace tours, classroom projects with industry involvement, and job shadows, to industry projects, employer speakers, internships, service learning, and more.">
+                                            <i class="fak fa-wbl"></i> Work-Based Learning
+                                        </button>
+                                    </div>
+                                </div>
+
+                                Users can click on the instructor's name to send an email. To revise your search,
+                                please use the search criteria box above.<BR />
+
+                            </div>
+
+                            <table class="table table-striped datatable-responsive responsive table-bordered"
+                                   id="classes" style="width:100%;">
+                                <thead>
+                                <tr>
+                                    <th class="all">Class</th>
+                                    <!--0-->
+                                    <th class="none">Units</th>
+                                    <!--1-->
+                                    <th class="all">Class Nbr</th>
+                                    <!--2-->
+                                    <th class="desktop">Capacity</th>
+                                    <!--3-->
+                                    <th class="all">Open</th>
+                                    <!--4-->
+                                    <th class="all">Status</th>
+                                    <!--5-->
+                                    <th class="all">Type</th>
+                                    <!--6-->
+                                    <th class="desktop">Room</th>
+                                    <!--7-->
+                                    <th class="all">Times</th>
+                                    <!--8-->
+                                    <th class="all">Days</th>
+                                    <!--10-->
+                                    <th class="all">Dates</th>
+                                    <!--9-->
+                                    <th class="desktop">Instructor</th>
+                                    <!--11-->
+                                    <th class="never">Subject</th>
+                                    <!--12-->
+                                    <th class="never">Start Time</th>
+                                    <!--13-->
+                                    <th class="never">End Time</th>
+                                    <!--14-->
+                                    <th class="never">Start Date</th>
+                                    <!--15-->
+                                    <th class="never">End Date</th>
+                                    <!--16-->
+                                    <th class="none">Class Notes</th>
+                                    <!--24-->
+                                    <th class="none">Last Day to Add</th>
+                                    <!--17-->
+                                    <th class="none">Last Day to Drop</th>
+                                    <!--18-->
+                                    <th class="none">Last Day to Withdraw</th>
+                                    <!--19-->
+                                    <th class="none">Pass/No-Pass Deadline</th>
+                                    <!--20-->
+                                    <th class="none">Refund Deadline</th>
+                                    <!--21-->
+                                    <th class="none">Requisites</th>
+                                    <th class="none">In-Person Exams</th>
+                                    <!--34-->
+                                    <!--22-->
+                                    <th class="none">Course Description</th>
+                                    <!--23-->
+                                    <th class="none">Degree Applicable</th>
+                                    <!--25-->
+                                    <th class="none">Transferability</th>
+                                    <th class="none">Work-Based Learning</th>
+                                    <!--26-->
+                                    <th class="none">Books</th>
+                                    <!--27-->
+                                    <th class="never">Book Cost</th>
+                                    <!--28-->
+                                    <th class="never">Session</th>
+                                    <!--29-->
+                                    <th class="never">Honors</th>
+                                    <!--30-->
+                                    <th class="never">Course Name</th>
+                                    <!--31-->
+                                    <th class="never">Catalog</th>
+                                    <!--32-->
+                                    <th class="never">Book Term</th>
+                                    <!--33-->
+                                    <th class="never">Class Name</th>
+                                    <!--34-->
+                                    <th class="never">College</th>
+                                    <th class="never">Class Meeting Number</th>
+                                    <!--34-->
+
+                                </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+                        <!-- /basic table -->
+
+
+                    </div>
+                    <!-- /content area -->
+                </div>
+
+
+            </div>
+        </div>
+        <!-- /page header -->
+
+
+        <!-- Footer -->
+        <footer class="page-footer font-small bg-sdccdfooter pt-4 px-2">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- logo row -->
+                <div class="row">
+                    <a class="logo" href="/"><img alt="San Diego Community College District" height="100px"
+                                                  src="https://www.sdccd.edu/about/departments-and-offices/communications-and-public-relations/images/logos/sdccd2017logoweb.png"></a>
+                </div>
+                <!-- links and content row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <p>
+                            San Diego Community College District<br>
+                            3375 Camino Del Rio South<br>
+                            San Diego, California <span id="directedit">92108</span>
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><a href="/">San Diego Community College District</a></li>
+                            <li><a href="http://www.sdcity.edu/">San Diego City College</a></li>
+                            <li><a href="http://www.sdmesa.edu/">San Diego Mesa College</a></li>
+                            <li><a href="http://www.sdmiramar.edu/">San Diego Miramar College</a></li>
+                            <li><a href="http://www.sdce.edu/">San Diego Continuing Education</a></li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-md-0 mb-6 text-md-right">
+
+                        <!-- Links -->
+
+                        <ul class="nav nav-fill justify-content-end" style="text-align: right">
+                            <li class="nav-item"><a href="/about/index.aspx" title="About">About</a></li>
+                            <li class="nav-item"><a href="/community-and-alumni/index.aspx"
+                                                    title="Alumni">Alumni</a></li>
+                            <li class="nav-item"><a href="/about/contact.aspx" title="Contact us">Contact Us</a>
+                            </li>
+                            <li class="nav-item"><a href="/employees/index.aspx" title="Employees">Employees</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-fill justify-content-end">
+                            <li class="nav-item"><a href="/about/mission-and-goals.aspx"
+                                                    title="Mission and Goals">Mission &amp; Goals</a></li>
+                            <li class="nav-item"><a href="/students/index.aspx" title="Students">Students</a></li>
+                            <li class="nav-item"><a href="/about/departments-and-offices/human-resources/index.aspx"
+                                                    title="Human Resources">Human
+                                Resources</a></li>
+                            <li class="nav-item"><a href="/about/accessibility-statement.aspx"
+                                                    title="Accessibility Statement">Accessibility
+                                Statement</a></li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+
+                </div>
+                <!-- Grid row -->
+                <div class="row">
+                    <ul class="social-nav ml-auto">
+                        <li><a aria-label="Link to SDCCD on Facebook" href="https://www.facebook.com/sdccd"
+                               target="_blank"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                        <li><a aria-label="Link to SDCCD on Twitter" href="https://twitter.com/SDCCD"
+                               target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                        <li><a aria-label="Link to SDCCD on Instagram" href="https://www.instagram.com/thesdccd/"
+                               target="_blank"><i aria-hidden="true" class="fa fa-instagram"></i></a></li>
+                        <li><a aria-label="Link to SDCCD on YouTube" href="https://www.youtube.com/user/TheSDCCD"
+                               target="_blank"><i aria-hidden="true" class="fa fa-youtube-play"></i></a></li>
+                        <li><a aria-label="Link to SDCCD on LinkedIn"
+                               href="https://www.linkedin.com/company-beta/165834/" target="_blank"><i
+                                aria-hidden="true" class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="row text-right" style="float:right;">
+                    <p><a href="/about/copyright.aspx">© San Diego Community College
+                        District</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="/about/disclaimer.aspx">Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="/about/privacy-statement.aspx">Privacy</a></p>
+
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+
+        </footer>
+        <!-- Footer -->
+
+
+    </div>
+    <!-- /main content -->
+
+</div>
+<!-- /page content -->
+
+<!-- Core JS files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+<script src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.5/js/responsive.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script src="https://cdn.datatables.net/datetime/1.1.2/js/dataTables.dateTime.min.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/classlist.js"></script>
+<script src="js/clssearchv2.js?v=1"></script>
+<!-- /core JS files -->
+<script>
+    $('#txtStart').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
+</script>
+
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+<script>
+    $('#classes').on('draw.dt', function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+<script>
+    new ClipboardJS('.btn');
+</script>
+<script>
+    $(document).ready(function () {
+        var select = GetUrlParameter("txtSession");
+        $("#" + select).attr("selected", "");
+    });
+
+    function GetUrlParameter(name) {
+        var value;
+        $.each(window.location.search.slice(1).split("&"), function (i, kvp) {
+            var values = kvp.split("=");
+            if (name === values[0]) {
+                value = values[1] ? values[1] : values[0];
+                return false;
+            }
+        });
+        return value;
+    }
+</script>
+<script>
+    window.onload = function () {
+        document.getElementById("term").innerHTML = "Summer 2022";
+
+        function querySt(ji) {
+
+            hu = window.location.search.substring(1);
+            gy = hu.split("&");
+
+            for (i = 0; i < gy.length; i++) {
+                ft = gy[i].split("=");
+                if (ft[0] == ji) {
+                    return ft[1];
+                }
+            }
+        }
+
+        var fieldName = querySt("session")
+        var fieldName2 = querySt("cestatus");
+        var fieldName3 = querySt("status");
+        var fieldName4 = querySt("college");
+
+
+        if (fieldName == null) {} else {
+            document.getElementById('txtSession').value = fieldName;
+        }
+        if (fieldName2 == null) {} else {
+            document.getElementById('txtCEStatus').value = fieldName2;
+        }
+        if (fieldName3 == null) {} else {
+            document.getElementById('txtStatus').value = fieldName3;
+        }
+        if (fieldName4 == null) {} else {
+            document.getElementById('txtCollege').value = fieldName4;
+        }
+
+    }
+</script>
+
+<!-- Theme JS files -->
+<script src="js/page.min.js"></script>
+<script src="js/blockui.min.js"></script>
+<!-- Theme JS files -->
+<script src="js/uniform.min.js"></script>
+<script src="js/switchery.min.js"></script>
+<script src="js/switch.min.js"></script>
+<script src="https://kit.fontawesome.com/81772a3404.js" crossorigin="anonymous"></script>
+<!-- /theme JS files -->
+
+<!-- Modal for COVID
+<script>
+    $(document).ready(function () {
+        $("#important").modal('show');
+    });
+</script>
+<div class="modal fade" id="important" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Safe Return to Campus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="text-align:center">
+                    <img src="https://www.sdccd.edu/students/covid19/covid-banner.png" width="450px">
+                </div>
+                <br/>
+                <p>San Diego Community College District (SDCCD) is requiring all new and
+                    returning students to present proof of <b>full COVID-19 vaccination</b> for in-person instruction or activities on campus (including in-person exams). For more information please
+                    visit the link below:</p>
+                <p><a href="https://www.sdccd.edu/students/covid19/" target="_blank">COVID-19 Information for
+                    Students | https://www.sdccd.edu/students/covid19/</a></p>
+                <p>Classes with an in-person component will have a <i class="fas fa-syringe"></i> icon next to the "Class Type" (e.g. On Campus or Partially Online). </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- popup on click
+<div class="modal fade" id="pending" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Pending Update</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            We are working in updating the enrollment totals for this class, please check again later.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+</div>-->
+
+</body>
+
+</html>
