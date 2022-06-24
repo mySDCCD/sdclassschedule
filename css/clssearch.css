@@ -1,0 +1,333 @@
+th.sorting_disabled {background-color:#fff;color:#000;text-align:center;}
+
+ul.social-nav {
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+
+ul.social-nav li {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 10px;
+	display: inline-block;
+	float: right;
+}
+
+ul.social-nav li a {
+	background: #fff;
+	display: inline-block;
+	line-height: 40px;
+	font-size: 22px;
+	text-align: center;
+	border-radius: 50%;
+	color: #008A98;
+	height: 40px;
+	width: 40px;
+	transition: all 0.3s ease-in-out
+}
+
+ul.social-nav li a:hover {
+	opacity: .7
+}
+
+footer ul.social-nav li a {
+	color: #000
+}
+
+footer a {
+	color:#fff;
+}
+
+footer a:hover {
+	color:#009999;
+}
+
+.bg-sdccd {
+	background-color: #009999; }
+
+.bg-sdccdfooter {
+	background-color: #000000; }
+
+.navbar-brand img {
+	height: 5rem;
+	display: block; }
+
+/* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 0px solid #999999;
+	display: table-cell;
+	padding: 1px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+.boxed {
+  margin-top: 15px;
+  margin-bottom: 15px;
+	margin-inside: 30px;
+  border:solid 4px #009999;
+	background-color: #009999;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-radius: 8px;
+}
+#de {
+	display: none;
+}
+
+
+/* RESPONSIVE EXAMPLE */
+
+.stacktable.large-only { display: table; !important}
+.stacktable.small-only { display: table; !important}
+
+@media (max-width: 800px) {
+  .stacktable.large-only { display: table; !important}
+  .stacktable.small-only { display: table; !important}
+}
+
+@media 
+only screen and (max-width: 800px)
+ {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+    	margin: auto;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 0px solid #ccc; }
+   
+   table.dataTable tbody td.child {background-color: #ffffff; color:#123456; text-align:left;}
+
+   table.dataTable tbody td {text-align:right;}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee; 
+		position: relative;
+		padding-left: 25%; 
+    	text-align: left;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+    	font-weight: bold;
+    	text-align: center;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		white-space: nowrap;
+	}
+
+	.modal-content {
+		min-width: 200px !important;
+	}
+
+	.modal-body td:nth-child(1) {
+		color:#ffffff !important;
+		font-weight: bold !important;
+	}
+    
+	.page-item.active .page-link {
+    background-color: lightgrey !important;
+    border: 1px solid black;
+}
+.page-link {
+    color: black !important;
+}
+	/*
+	Label the data
+	*/
+	td:nth-of-type(0):before { content: ""; }
+	td:nth-of-type(1):before { content: ""; }
+	td:nth-of-type(2):before { content: ""; }
+	td:nth-of-type(3):before { content: "Class #"; }
+    td:nth-of-type(4):before { content: "Capacity"; }
+    td:nth-of-type(5):before { content: "Seats"; }
+    td:nth-of-type(6):before { content: "Status"; }
+    td:nth-of-type(7):before { content: "Room"; }
+    td:nth-of-type(8):before { content: "Type"; }
+	td:nth-of-type(9):before { content: "Times"; }
+	td:nth-of-type(10):before { content: "Dates"; }
+	td:nth-of-type(11):before { content: "Days"; }
+	td:nth-of-type(12):before { content: "Instructor"; }
+	td:nth-of-type(13):before { content: "Start Time"; }
+	td:nth-of-type(14):before { content: "End Time"; }
+	td:nth-of-type(15):before { content: "Start Date"; }
+	td:nth-of-type(16):before { content: "End Date"; }
+	td:nth-of-type(17):before { content: "Course Descr"; }
+	td:nth-of-type(18):before { content: "Class Notes"; }
+	td:nth-of-type(19):before { content: "Requisites"; }
+	td:nth-of-type(20):before { content: "Degree Applicable"; }
+	td:nth-of-type(21):before { content: "Transfer"; }
+	td:nth-of-type(22):before { content: "Books"; }
+    td:nth-of-type(1) {background-color:#009999; color:#009999;}
+}
+
+.modal-content {}
+
+.modal-body td:nth-child(1) {
+	color: #009999;
+	font-weight: bold;
+}
+
+.modal-body td:nth-child(2) {
+	text-align: right;
+}
+
+@media only screen and (max-width: 775px) {
+	.modal-content {
+		min-width: 200px;
+	}
+
+	.modal-body td:nth-child(1) {
+		color: #ffffff !important;
+		font-weight: bold !important;
+	}
+
+}
+
+.tooltip {
+	position: absolute;
+	z-index: 1020;
+	display: block;
+	visibility: visible;
+	padding: 5px;
+	font-size: 11px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	min-height: 120px;
+	min-width: 250px;
+}
+
+.tooltip-inner em {
+	font-family: Candara, Tahoma, Geneva, sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	float: left;
+	padding: 0.2em 0 0.2em 0;
+}
+
+.tooltip-inner div {
+	font-family: Candara, Tahoma, Geneva, sans-serif;
+	font-size: 1.2em;
+	float: right;
+	padding: 0.2em 0 0.2em 0;
+}
+
+.tooltip.in {
+	opacity: .8;
+	filter: alpha(opacity=80)
+}
+
+.tooltip-inner {
+	padding: 3px 8px;
+	color: #fff;
+	text-align: left;
+	font-size: 12px;
+	background: #000;
+	border: 1px solid #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 15px;
+	border: 1px solid #314A5B;
+	min-height: 150px;
+	min-width: 250px;
+}
+
+.tooltip-arrow {
+	position: absolute;
+	width: 0;
+	height: 0
+}
+
+#new-search-area {
+	width: 100%;
+	clear: both;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td.dtr-control:before {
+	content: '';
+	< !-- f151 -->font-family: FontAwesome;
+	cursor: pointer;
+	font-size: 22px;
+	border: 0px;
+	border-radius: 0px;
+	background-color: transparent;
+	box-shadow: none;
+	color: #009999;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td.dtr-control {
+	padding-left: 8px;
+	text-align: center;
+}
+
+table.dataTable tr.dtrg-group.dtrg-end td {
+	background-color: #000;
+	color: #fff;
+	font-weight: normal;
+	text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#new-search-area input {
+	width: 600px;
+	font-size: 20px;
+	padding: 5px;
+}
+
+div.dataTables_wrapper div.dataTables_processing {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 99999;
+	margin-left: 0px;
+	margin-top: 0px;
+	background-color: gray;
+	filter: alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+	display: none;
+	color: #fff;
+}
