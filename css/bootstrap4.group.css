@@ -1,0 +1,33 @@
+table.dataTable tr.dtrg-group td {
+    background-color: #009999; /* This was only difference in CE version #004960 */
+    padding: 0.10em;
+    color: #fff;
+}
+
+@media
+only screen and (max-width: 800px)
+{
+    table.dataTable tr.dtrg-group td {
+        background-color: #000;
+        padding: 0.10em;
+        color: #fff;
+    }
+
+}
+
+table.dataTable tr.dtrg-group.dtrg-level-0 td {
+    font-weight: bold
+}
+
+table.dataTable tr.dtrg-group.dtrg-level-1 td,
+table.dataTable tr.dtrg-group.dtrg-level-2 td {
+    background-color: #f0f0f0;
+    padding-top: 0.10em;
+    padding-bottom: 0.10em;
+    padding-left: 2em;
+    font-size: 0.9em
+}
+
+table.dataTable tr.dtrg-group.dtrg-level-2 td {
+    background-color: #f3f3f3
+}

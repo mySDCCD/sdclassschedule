@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+	<title>SDCCD Faculty Directory</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+	<link rel="stylesheet" href="css/bootstrap4.group.css">
+	<!-- /global stylesheets -->
+
+	<!-- Local stylesheets-->
+	<link href="css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="css/components.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+	<!-- /Local Stylesheets-->
+
+	<!-- Edit This-->
+	<link rel="stylesheet" href="css/clssearch.css">
+
+	<style>
+
+		.modal-content {
+
+		}
+
+		.modal-body td:nth-child(1) {
+			color: #009999;
+			font-weight: bold;
+		}
+
+		.modal-body td:nth-child(2) {
+			text-align: right;
+		}
+
+		@media only screen and (max-width: 775px) {
+			.modal-content {
+				min-width: 200px;
+			}
+
+			.modal-body td:nth-child(1) {
+				color: #ffffff !important;
+				font-weight: bold !important;
+			}
+
+		}
+
+		.tooltip {
+			position: absolute;
+			z-index: 1020;
+			display: block;
+			visibility: visible;
+			padding: 5px;
+			font-size: 11px;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			min-height: 120px;
+			min-width: 250px;
+		}
+
+		.tooltip-inner em {
+			font-family: Candara, Tahoma, Geneva, sans-serif;
+			font-size: 1.2em;
+			font-weight: bold;
+			float: left;
+			padding: 0.2em 0 0.2em 0;
+		}
+
+		.tooltip-inner div {
+			font-family: Candara, Tahoma, Geneva, sans-serif;
+			font-size: 1.2em;
+			float: right;
+			padding: 0.2em 0 0.2em 0;
+		}
+
+		.tooltip.in {
+			opacity: .8;
+			filter: alpha(opacity=80)
+		}
+
+		.tooltip-inner {
+			padding: 3px 8px;
+			color: #fff;
+			text-align: left;
+			font-size: 12px;
+			background: #000;
+			border: 1px solid #000;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 15px;
+			border: 1px solid #314A5B;
+			min-height: 150px;
+			min-width: 250px;
+		}
+
+		.tooltip-arrow {
+			position: absolute;
+			width: 0;
+			height: 0
+		}
+		#new-search-area {
+			width: 100%;
+			clear: both;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		#new-search-area input {
+			width: 600px;
+			font-size: 20px;
+			padding: 5px;
+		}
+	</style>
+	<!--/end Edit CSS-->
+	<!--Google Analytics-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150230026-4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-150230026-4');
+	</script>
+	<!--end google analytics-->
+
+</head>
+
+<body>
+
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-dark bg-sdccd navbar-static">
+	<div class="navbar-brand">
+		<a href="https://www.sdccd.edu" class="d-inline-block">
+			<img src="https://www.sdccd.edu/about/departments-and-offices/communications-and-public-relations/images/logos/sdccd2017logoweb.png"
+				 alt="">
+		</a>
+	</div>
+	<div class="collapse navbar-collapse flex-column" id="navbar-mobile">
+
+
+		<ul class="navbar-nav ml-auto small">
+
+
+
+			<li><a title="Class Schedule" href="http://classschedule.sdccd.edu" class="navbar-nav-link">Class
+				Schedule</a></li>
+			<li><a title="Employee Email" href="https://mail.sdccd.edu/" target="_blank"
+				   class="navbar-nav-link">Employee Email</a></li>
+			<!--<li><a href="#">Sitemap</a></li>-->
+			<li><a title="Directories - List of district departments" href="/about/directories.aspx"
+				   class="navbar-nav-link">Directories</a></li>
+			<li><a title="Board Meeting Agenda" href="https://www.boarddocs.com/ca/sdccd/Board.nsf/Public"
+				   class="navbar-nav-link">Board Meeting Agenda</a></li>
+
+			<li class="nav-item dropdown dropdown-user">
+				<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+				   data-toggle="dropdown">
+					<span>Quicklinks</span>
+				</a>
+
+				<div class="dropdown-menu dropdown-menu-right">
+
+					<a title="Enroll, register" href="/imagine/" class="dropdown-item">Enroll/Register</a>
+					<a title="San Diego Promise"
+					   href="/about/departments-and-offices/student-services-department/promise/" target="_blank"
+					   class="dropdown-item">San Diego Promise</a>
+					<a title="Departments and Offices" href="/about/departments-and-offices/"
+					   class="dropdown-item">Departments and Offices</a>
+					<a title="Chancellor Search"
+					   href="/about/departments-and-offices/communications-and-public-relations/chancellor_search/index.aspx"
+					   target="_blank" class="dropdown-item">Chancellor Search</a>
+					<a title="Doing Business with SDCCD" class="dropdown-item"
+					   href="/about/departments-and-offices/business-technology-services-division/business-support-services/purchasing-vendors/index.aspx">Doing
+						Business with SDCCD</a>
+					<a title="Title 9 and Clery Act" class="dropdown-item" href="/students/titleix.aspx">Title
+						IX/Clery Act</a>
+					<!--<li><a href="https://mail.sdccd.edu/owa/auth/logon.aspx" target="_blank">Employee Email</a></li>-->
+					<a title="Canvas Solutions login" href="https://sdccd.instructure.com/login/canvas"
+					   class="dropdown-item">Canvas Login</a>
+					<a title="Jobs at the SDCCD" href="https://www.sdccdjobs.com/" target="_blank"
+					   class="dropdown-item">Jobs at SDCCD</a>
+				</div>
+			</li>
+
+		</ul>
+		<ul class="social-nav ml-auto">
+			<li class="nav-item"><a href="https://www.facebook.com/sdccd" target="_blank"
+									aria-label="Link to SDCCD on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			</li>
+			<li class="nav-item"><a href="https://twitter.com/SDCCD" target="_blank"
+									aria-label="Link to SDCCD on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li class="nav-item"><a href="https://www.instagram.com/thesdccd/" target="_blank"
+									aria-label="Link to SDCCD on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			</li>
+			<li class="nav-item"><a href="https://www.youtube.com/user/TheSDCCD" target="_blank"
+									aria-label="Link to SDCCD on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+			</li>
+			<li class="nav-item"><a href="https://www.linkedin.com/company-beta/165834/" target="_blank"
+									aria-label="Link to SDCCD on LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+
+		<!--<li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link">
+                    <i class="icon-bell2"></i>
+                    <span class="d-md-none ml-2">Notifications</span>
+                    <span class="badge badge-mark border-white ml-auto ml-md-0"></span>
+                </a>
+            </li>-->
+	</div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Page content -->
+<div class="page-content">
+
+	<!-- Main content -->
+	<div class="content-wrapper">
+
+		<!-- Page header -->
+		<div class="page-header page-header-light">
+			<div class="page-header-content header-elements-md-inline">
+				<div class="page-title d-flex">
+					<h4><span class="font-weight-semibold">Online Class Schedule - Fall 2020</span> </h4>
+					<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+				</div>
+
+				<div class="header-elements d-none dropdown">
+					<a href="#" class="btn btn-labeled btn-labeled-right bg-sdccd dropdown-toggle"
+					   data-toggle="dropdown">Menu <b><i class="icon-menu7"></i></b></a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item">Fall 2020</a>
+						<div class="dropdown-divider"></div>
+						<a href="http://my.sdccd.edu" target="_blank" class="dropdown-item">mySDCCD</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+				<div class="d-flex">
+					<div class="breadcrumb">
+						Fall 2020
+					</div>
+
+
+				</div>
+
+				<div class="header-elements d-none">
+					<div class="breadcrumb justify-content-center">
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /page header -->
+
+
+		<!-- Content area -->
+		<div class="content">
+
+			<!-- Basic card -->
+			<div class="card">
+				<div class="card-header header-elements-inline">
+					<h5 class="card-title">Search the Online Class Schedule</h5>
+					<div class="header-elements">
+						<div class="list-icons">
+							<a class="list-icons-item" data-action="collapse"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body">
+					<p>Welcome to our new class search. Please note that this information is refreshed as noted on the timer below.
+						In order to register for classes you must be logged into <a href="http://my.sdccd.edu"
+																					target="_blank">mySDCCD</a>. Please be sure to reference the Class Nbr when you register
+						for classes.
+						<!--Students who are interested in enrolling in a class below, should either show up the first week of class to try and "crash" and obtain a permission number. For online classes, students should contact the instructor by email by clicking on their name below to contact them.-->
+					</p>
+					<p><b>Note:</b> You may need to set up your default email service/program in order to contact
+						the professor.&nbsp; If you do not have an email program, you can right click on the name
+						and select "Copy Email Address" and paste it into your web email.</p>
+					<h5>
+						<div style="display:none;">Data refreshes in <span id="time"></span>.</div>
+					</h5>
+
+					<div class="card">
+						<div class="card-header bg-dark text-white d-flex justify-content-between">
+							<span class="font-size-sm text-uppercase font-weight-semibold">How to use the class search</span>
+							<span class="font-size-sm text-uppercase font-weight-semibold">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+									</div>
+								</span>
+
+						</div>
+						<div class="card-body">
+							<h6 class="card-title">Legend</h6>
+
+							<div class="row">
+								<div class="col-sm">
+									<div class="alert alert-primary alert-styled-custom">
+										<i class="fas fa-h-square"></i>Designates an honors class.
+									</div>
+								</div>
+								<div class="col-sm">
+									<div class="alert alert-primary alert-styled-custom">
+										<img src="img/ztc.png" width="20px" alt="No Cost Textbooks">
+										<span class="font-weight-semibold">Zero Cost Textbooks</span> This class has no cost textbooks (free).
+									</div>
+								</div>
+								<div class="col-sm">
+									<div class="alert alert-primary alert-styled-custom">
+										<img src="img/more.png" width="20px" alt="more details icon">
+										<span class="font-weight-semibold">Class Details</span> Click to see more on the class.
+									</div>
+								</div>
+								<div class="col-sm">
+									<div class="alert alert-primary alert-styled-custom">
+										<i class="far fa-calendar-alt"></i>
+										<span class="font-weight-semibold">Class Deadlines</span> Hover your mouse over this icon to see the class deadlines.
+									</div>
+								</div>
+
+							</div>
+
+							<p class="card-text">
+								Once you pick the class, click on the class number button <button class="btn btn-outline-primary"><i class="far fa-copy"></i> 42122</button> to copy the Class Number to your clipboard.
+
+								Then paste it in the
+								Class Number section in <a href="http://my.sdccd.edu" target="_blank">mySDCCD</a>.
+								<img src="img/regdirect.png" alt="Picture of mySDCCD Shopping Cart">
+
+							</p>
+						</div>
+
+						<div class="card-footer bg-transparent d-flex justify-content-between border-top-0 pt-0">
+							<span class="text-muted"></span>
+							<span>
+
+								</span>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<!-- /basic card -->
+			<!-- Search Form layouts -->
+			<div class="row">
+				<div class="col-md-12">
+
+					<!-- Horizontal form -->
+
+					<div class="card">
+						<div class="card-header header-elements-inline">
+							<h5 class="card-title">Search Criteria</h5>
+							<div class="header-elements">
+								<div class="list-icons">
+									<a class="list-icons-item" data-action="collapse"></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-body">
+							<p class="card-text">
+								Type/choose your criteria and click on the "Search" button.  You may also set additional criteria by clicking on "Advanced Filters."
+							</p>
+							<div class="form-group row">
+								<label class="col-lg-3 col-form-label"><b>Class Name</b></label>
+								<div class="col-lg-9">
+									<input type="text" id="txtClass" class="form-control" placeholder="Search...">
+									<span class="form-text text-muted">*For exact search, please use quotes (e.g. "MATH 104").</span>
+
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label class="col-lg col-form-label" for="txtCollege">College</label>
+								<div class="col-lg">
+									<select name="select" id="txtCollege" class="form-control">
+										<option value="">All</option>
+										<option value="City">San Diego City College</option>
+										<option value="Mesa">San Diego Mesa College</option>
+										<option value="Miramar">San Diego Miramar College</option>
+									</select>
+								</div>
+								<label class="col-lg col-form-label" for="txtStatus">Class Status</label>
+								<div class="col-lg">
+									<select name="select" id="txtStatus" class="form-control">
+										<option value="">All Classes</option>
+										<option value="open">Open Classes Only</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label class="col-lg col-form-label" for="txtSubject">Subject</label>
+								<div class="col-lg">
+									<select name="select" id="txtSubject" class="form-control">
+										<option value="">All</option>
+										<option value="ACCT">ACCT - Accounting</option>
+										<option value="ADJU">ADJU - Administration of Justice</option>
+										<option value="AGRI">AGRI - Agriculture</option>
+										<option value="AIRE">AIRE - Air C/Refrig/Envir.Cont.Tech</option>
+										<option value="ALLH">ALLH - Allied Health</option>
+										<option value="AMSL">AMSL - Amer Sign Language/Interpretng</option>
+										<option value="ANHL">ANHL - Animal Health Technology</option>
+										<option value="ANTH">ANTH - Anthropology</option>
+										<option value="AODS">AODS - Alcohol and Other Drug Studies</option>
+										<option value="ARAB">ARAB - Arabic</option>
+										<option value="ARCH">ARCH - Architecture</option>
+										<option value="ARTF">ARTF - Art - Fine Art</option>
+										<option value="ARTG">ARTG - Art - Graphic Design</option>
+										<option value="ASTR">ASTR - Astronomy</option>
+										<option value="AUTO">AUTO - Automotive Technology</option>
+										<option value="AVIA">AVIA - Aviation</option>
+										<option value="AVIM">AVIM - Aviation Maint. Technology</option>
+										<option value="BANK">BANK - Banking and Finance</option>
+										<option value="BCAS">BCAS - Black Contractor's Assoc. Stud</option>
+										<option value="BIOL">BIOL - Biological Sciences</option>
+										<option value="BLAS">BLAS - Black Studies</option>
+										<option value="BLDC">BLDC - Buildg Construction Technolog</option>
+										<option value="BUSE">BUSE - Business</option>
+										<option value="CACM">CACM - Culinary Arts/Culinary Mngmt</option>
+										<option value="CBTE">CBTE - Computer Business Technology</option>
+										<option value="CHEM">CHEM - Chemistry</option>
+										<option value="CHIC">CHIC - Chicana and Chicano Studies</option>
+										<option value="CHIL">CHIL - Child Development</option>
+										<option value="CHIN">CHIN - Chinese</option>
+										<option value="CISC">CISC - Computer and Info Sciences</option>
+										<option value="COMS">COMS - Communication Studies</option>
+										<option value="CONF">CONF - Consumer Studies</option>
+										<option value="COSM">COSM - Cosmetology</option>
+										<option value="CRES">CRES - Conflict Resolution</option>
+										<option value="DANC">DANC - Dance</option>
+										<option value="DENA">DENA - Dental Assisting</option>
+										<option value="DFLM">DFLM - Digital Film Production</option>
+										<option value="DIES">DIES - Diesel Technology</option>
+										<option value="DJRN">DJRN - Digital Journalism</option>
+										<option value="DRAM">DRAM - Dramatic Arts</option>
+										<option value="DSPS">DSPS - Disability Support Prog &amp; Serv</option>
+										<option value="ECON">ECON - Economics</option>
+										<option value="EDUC">EDUC - Education</option>
+										<option value="EGEE">EGEE - Energy and Geo-Enviro Engin</option>
+										<option value="ELAC">ELAC - English Language Acquisition</option>
+										<option value="ELCT">ELCT - Electricity</option>
+										<option value="ELDT">ELDT - Electronic Systems</option>
+										<option value="EMGM">EMGM - Emergency Medical Technician</option>
+										<option value="ENGE">ENGE - Engineering</option>
+										<option value="ENGL">ENGL - English</option>
+										<option value="ENGN">ENGN - Engineering Technology</option>
+										<option value="ESCR">ESCR - Escrow</option>
+										<option value="EXAM">EXAM - Exam Course</option>
+										<option value="EXSC">EXSC - Exercise Science</option>
+										<option value="FASH">FASH - Fashion</option>
+										<option value="FERM">FERM - Fermentation</option>
+										<option value="FILI">FILI - Filipino</option>
+										<option value="FIPT">FIPT - Fire Protection Technology</option>
+										<option value="FREN">FREN - French</option>
+										<option value="GEND">GEND - Gender Studies</option>
+										<option value="GENS">GENS - General Studies</option>
+										<option value="GEOG">GEOG - Geography</option>
+										<option value="GEOL">GEOL - Geology</option>
+										<option value="GERM">GERM - German</option>
+										<option value="GISG">GISG - Geographic Info Systems</option>
+										<option value="GRFX">GRFX - Graphics</option>
+										<option value="HEAL">HEAL - Health Education</option>
+										<option value="HEIT">HEIT - Health Information Technology</option>
+										<option value="HIMS">HIMS - Health Information Management</option>
+										<option value="HIST">HIST - History</option>
+										<option value="HOSP">HOSP - Hospitality</option>
+										<option value="HUMA">HUMA - Humanities</option>
+										<option value="HUMS">HUMS - Human Services</option>
+										<option value="INTE">INTE - Interior Design</option>
+										<option value="INWT">INWT - Info. Network and Web Tech</option>
+										<option value="ITAL">ITAL - Italian</option>
+										<option value="JAPN">JAPN - Japanese</option>
+										<option value="JOUR">JOUR - Journalism</option>
+										<option value="LABR">LABR - Labor Studies</option>
+										<option value="LCOM">LCOM - Learning Community</option>
+										<option value="LIBS">LIBS - Library Science</option>
+										<option value="MACT">MACT - Machine Technology</option>
+										<option value="MARK">MARK - Marketing</option>
+										<option value="MATH">MATH - Mathematics</option>
+										<option value="MEDA">MEDA - Medical Assisting</option>
+										<option value="MFET">MFET - Manufacturing Engineering Tech</option>
+										<option value="MLTT">MLTT - Medical Lab Tech Training</option>
+										<option value="MULT">MULT - Multimedia</option>
+										<option value="MUSC">MUSC - Commercial Music</option>
+										<option value="MUSI">MUSI - Music</option>
+										<option value="NLTE">NLTE - Nursery &amp; Landscape Technology</option>
+										<option value="NRSE">NRSE - Nursing Education</option>
+										<option value="NUTR">NUTR - Nutrition</option>
+										<option value="OCEA">OCEA - Oceanography</option>
+										<option value="PADM">PADM - Public Administration</option>
+										<option value="PARA">PARA - Paralegal</option>
+										<option value="PEAC">PEAC - Peace Studies</option>
+										<option value="PERG">PERG - Personal Growth</option>
+										<option value="PHIL">PHIL - Philosophy</option>
+										<option value="PHLB">PHLB - Phlebotomy</option>
+										<option value="PHOT">PHOT - Photography</option>
+										<option value="PHYN">PHYN - Physical Science</option>
+										<option value="PHYR">PHYR - Physical Therapist Assistant</option>
+										<option value="PHYS">PHYS - Physics</option>
+										<option value="POLI">POLI - Political Science</option>
+										<option value="PSYC">PSYC - Psychology</option>
+										<option value="RADT">RADT - Radiologic Technology</option>
+										<option value="REAL">REAL - Real Estate</option>
+										<option value="RTVF">RTVF - Radio, Television and Film</option>
+										<option value="RUSS">RUSS - Russian</option>
+										<option value="SDGE">SDGE - San Diego Gas and Electric Co</option>
+										<option value="SOCO">SOCO - Sociology</option>
+										<option value="SPAN">SPAN - Spanish</option>
+										<option value="SUST">SUST - Sustainability</option>
+										<option value="TAGA">TAGA - Tagalog</option>
+										<option value="TROL">TROL - San Diego Trolley</option>
+										<option value="VIET">VIET - Vietnamese</option>
+										<option value="VTAH">VTAH - Veterinary Technology</option>
+										<option value="WEBD">WEBD - Web Development</option>
+										<option value="WMNS">WMNS - Women's Studies</option>
+										<option value="WORK">WORK - Work Experience</option>
+									</select>
+								</div>
+								<label class="col-lg col-form-label" for="txtCatnbr">Catalog Number</label>
+								<div class="col-lg">
+									<input type="text" id="txtCatnbr" class="form-control" maxlength="3" placeholder="101...">
+								</div>
+							</div>
+
+							<div class="filter-container">
+
+								<div id="filter-body" class="panel-collapse collapse">
+									<div class="panel-body filter-body">
+
+										<div class="card">
+										<div class="card-header bg-sdccd text-white header-elements-inline">
+											<h6 class="card-title">Advanced Filters</h6>
+											<div class="header-elements">
+												<div class="list-icons">
+												</div>
+											</div>
+										</div>
+
+										<div class="card-body">
+
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label" for="txtClassType">Class Location
+												</label>
+												<div class="col-lg-3">
+													<select name="select" id="txtClassType" class="form-control">
+														<option value="">All</option>
+														<option value="On Campus">On Campus</option>
+														<option value="Off Campus">Off Campus</option>
+														<option value="Partially Online">Hybrid (Partially Online)</option>
+														<option value="Online (No Set Meeting Times)">Online with No Set
+															Meeting Times</option>
+														<option value="Online (Set Meeting Times)">Online with Scheduled Meeting
+															Times</option>
+													</select>
+												</div>
+												<label class="col-lg-3 col-form-label" for="txtClassNumber">Class Number</label>
+												<div class="col-lg-3">
+													<input type="text" id="txtClassNumber" class="form-control" maxlength="5" placeholder="12345...">
+												</div>
+											</div>
+
+
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label" for="txtBooks">Zero Cost Textbooks</label>
+												<div class="col-lg-3">
+													<select name="select" id="txtBooks" class="form-control">
+														<option value="">All</option>
+														<option value="FREE">Yes</option>
+													</select>
+												</div>
+												<label class="col-lg-3 col-form-label" for="txtTransfer">Transferable
+												</label>
+												<div class="col-lg-3">
+													<select name="select" id="txtTransfer" class="form-control">
+														<option value="">All Classes</option>
+														<option value="UC">Transferable to UC, CSU</option>
+														<option value="CSU">Transferable to CSU</option>
+													</select>
+												</div>
+											</div>
+
+
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label" for="txtSession">Session
+												</label>
+												<div class="col-lg-3">
+													<select name="select" id="txtSession" class="form-control">
+														<option value="">All Classes</option>
+														<option value="1">Regular (Full Semester) - Starts 8/17/2020</option>
+														<option value="8W1">First 8-Week Session - Starts 8/17/2020</option>
+														<option value="8W2">Second 8-Week Session - Starts 10/12/2020</option>
+														<option value="12W">12 Week Session - Starts 8/31/2020</option>
+														<option value="12E">12 Week Session - Starts 9/14/2020</option>
+														<option value="14W">14 Week Session - Starts 8/17/2020</option>
+														<option value="14E">14 Week Session - Starts 8/31/2020</option>
+														<option value="DYN">Short Term Classes - Various Start</option>
+														<option value="DY3">Short Term Classes - Shorter than 3 weeks</option>
+													</select>
+												</div>
+												<label class="col-lg-3 col-form-label" for="txtStart">Start Date
+												</label>
+												<div class="col-lg-3">
+													<input class="datepicker" id="txtStart" data-date-format="mm/dd/yyyy">
+												</div>
+											</div>
+
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label" for="txtHonors">Honors
+												</label>
+												<div class="col-lg-3">
+													<select name="select" id="txtHonors" class="form-control">
+														<option value="">All Classes</option>
+														<option value="HNRS">Yes</option>
+													</select>
+												</div>
+												<label class="col-lg-3 col-form-label" for="txtInstructor">Instructor Last Name</label>
+												<div class="col-lg-3">
+													<input type="text" id="txtInstructor" class="form-control" placeholder="Last Name...">
+												</div>
+											</div>
+										</div>
+
+
+
+
+										</div>
+
+										</div>
+
+
+
+
+
+
+
+
+
+
+								</div>
+
+							</div>
+							<div class="text-right">
+								<button class="btn btn-primary" id="filter-button" data-toggle="collapse"
+										data-parent="#accordion"><i class="fas fa-filter"></i> Advanced Filters</button> <button type="submit"
+																																 id="btnSearch" class="btn btn-primary"><i class="mdi mdi-filter-outline"></i><i
+									class="fas fa-search-location"></i> Search</button>
+							</div>
+
+						</div>
+					</div>
+					<!-- /horizotal form -->
+
+				</div>
+
+
+			</div>
+			<!-- /form layouts -->
+
+			<!-- Basic table -->
+			<div class="card" id="schedule">
+				<div class="card-header header-elements-inline">
+					<h5 class="card-title">Class Schedule</h5>
+					<div class="header-elements">
+						<div class="list-icons">
+						</div>
+						<form action="#">
+							<div class="form-group-feedback form-group-feedback-right">
+								<input id="searchbox" type="search" class="form-control wmin-200" placeholder="Keyword/Class # Search...">
+								<div class="form-control-feedback">
+									<i class="icon-search4 font-size-base text-muted"></i>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="card-body">
+					Users can click on the instructor's name to send an email. To revise your search, please
+					use the search criteria box above.
+					<BR /><BR />
+
+				</div>
+
+				<table id="classes" class="table table-striped datatable-responsive responsive table-bordered"
+					   width="100%">
+					<thead>
+					<tr>
+						<th class="all">Class</th><!--0-->
+						<th class="desktop">Units</th><!--1-->
+						<th class="all">Class Nbr</th><!--2-->
+						<th class="desktop">Class Capacity</th><!--3-->
+						<th class="all">Open Seats</th><!--4-->
+						<th class="all">Status</th><!--5-->
+						<th class="all">Room</th><!--6-->
+						<th class="desktop">Type</th><!--7-->
+						<th class="desktop">Class Times</th><!--8-->
+						<th class="all">Class Dates</th><!--9-->
+						<th class="desktop">Days</th><!--10-->
+						<th class="all">Instructor</th><!--11-->
+						<th class="never">Subject</th><!--12-->
+						<th class="never">Start Time</th><!--13-->
+						<th class="never">End Time</th><!--14-->
+						<th class="never">Start Date</th><!--15-->
+						<th class="never">End Date</th><!--16-->
+						<th class="none">Last Day to Add</th><!--17-->
+						<th class="none">Last Day to Drop</th><!--18-->
+						<th class="none">Last Day to Withdraw</th><!--19-->
+						<th class="none">Pass/No-Pass Deadline</th><!--20-->
+						<th class="none">Refund Deadline</th><!--21-->
+						<th class="none">Requisites</th><!--22-->
+						<th class="none">Course Description</th><!--23-->
+						<th class="none">Class Notes</th><!--24-->
+						<th class="none">Degree Applicable</th><!--25-->
+						<th class="none">Transferability</th><!--26-->
+						<th class="none">Books</th><!--27-->
+						<th class="never">Book Cost</th><!--28-->
+						<th class="never">Session</th><!--29-->
+						<th class="never">Honors</th><!--30-->
+						<th class="never">Course Name</th><!--31-->
+						<th class="never">Catalog</th><!--32-->
+					</tr>
+					</thead>
+				</table>
+
+			</div>
+			<!-- /basic table -->
+
+
+
+
+		</div>
+		<!-- /content area -->
+
+
+		<!-- Footer -->
+		<footer class="page-footer font-small bg-sdccdfooter pt-4 px-2">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-center text-md-left">
+
+				<!-- logo row -->
+				<div class="row">
+					<a href="/" class="logo"><img
+							src="https://www.sdccd.edu/about/departments-and-offices/communications-and-public-relations/images/logos/sdccd2017logoweb.png"
+							alt="San Diego Community College District" height="100px"></a>
+				</div>
+				<!-- links and content row -->
+				<div class="row">
+
+					<!-- Grid column -->
+					<div class="col-md-6 mt-md-0 mt-3">
+
+						<!-- Content -->
+						<p>
+							San Diego Community College District<br>
+							3375 Camino Del Rio South<br>
+							San Diego, California 92108
+						</p>
+						<ul class="list-unstyled">
+							<li><a href="/">San Diego Community College District</a></li>
+							<li><a href="http://www.sdcity.edu/">San Diego City College</a></li>
+							<li><a href="http://www.sdmesa.edu/">San Diego Mesa College</a></li>
+							<li><a href="http://www.sdmiramar.edu/">San Diego Miramar College</a></li>
+							<li><a href="http://www.sdce.edu/">San Diego Continuing Education</a></li>
+						</ul>
+					</div>
+					<!-- Grid column -->
+
+					<hr class="clearfix w-100 d-md-none pb-3">
+
+					<!-- Grid column -->
+					<div class="col-md-6 mb-md-0 mb-6 text-md-right">
+
+						<!-- Links -->
+
+						<ul class="nav nav-fill justify-content-end" style="text-align: right">
+							<li class="nav-item"><a title="About" href="/about/index.aspx">About</a></li>
+							<li class="nav-item"><a title="Alumni"
+													href="/community-and-alumni/index.aspx">Alumni</a></li>
+							<li class="nav-item"><a title="Contact us" href="/about/contact.aspx">Contact Us</a>
+							</li>
+							<li class="nav-item"><a title="Employees" href="/employees/index.aspx">Employees</a>
+							</li>
+						</ul>
+						<ul class="nav nav-fill justify-content-end">
+							<li class="nav-item"><a title="Mission and Goals"
+													href="/about/mission-and-goals.aspx">Mission &amp; Goals</a></li>
+							<li class="nav-item"><a title="Students" href="/students/index.aspx">Students</a></li>
+							<li class="nav-item"><a title="Human Resources"
+													href="/about/departments-and-offices/human-resources/index.aspx">Human
+								Resources</a></li>
+							<li class="nav-item"><a title="Accessibility Statement"
+													href="/about/accessibility-statement.aspx">Accessibility Statement</a></li>
+						</ul>
+
+					</div>
+					<!-- Grid column -->
+
+
+
+				</div>
+				<!-- Grid row -->
+				<div class="row">
+					<ul class="social-nav ml-auto">
+						<li><a href="https://www.facebook.com/sdccd" target="_blank"
+							   aria-label="Link to SDCCD on Facebook"><i class="fa fa-facebook"
+																		 aria-hidden="true"></i></a></li>
+						<li><a href="https://twitter.com/SDCCD" target="_blank"
+							   aria-label="Link to SDCCD on Twitter"><i class="fa fa-twitter"
+																		aria-hidden="true"></i></a></li>
+						<li><a href="https://www.instagram.com/thesdccd/" target="_blank"
+							   aria-label="Link to SDCCD on Instagram"><i class="fa fa-instagram"
+																		  aria-hidden="true"></i></a></li>
+						<li><a href="https://www.youtube.com/user/TheSDCCD" target="_blank"
+							   aria-label="Link to SDCCD on YouTube"><i class="fa fa-youtube-play"
+																		aria-hidden="true"></i></a></li>
+						<li><a href="https://www.linkedin.com/company-beta/165834/" target="_blank"
+							   aria-label="Link to SDCCD on LinkedIn"><i class="fa fa-linkedin"
+																		 aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="row text-right" style="float:right;">
+					<p><a href="/about/copyright.aspx">© San Diego Community College
+						District</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+							href="/about/disclaimer.aspx">Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+							href="/about/privacy-statement.aspx">Privacy</a></p>
+
+				</div>
+			</div>
+
+			<!-- Footer Links -->
+
+		</footer>
+		<!-- Footer -->
+
+
+	</div>
+	<!-- /main content -->
+
+</div>
+<!-- /page content -->
+
+<!-- Core JS files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.5/js/responsive.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/clssearch.js?v=1"></script>
+<!-- /core JS files -->
+<script>
+	$('#txtStart').datepicker({
+		uiLibrary: 'bootstrap4'
+	});
+</script>
+<script>
+	$('#classes').on('draw.dt', function () {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+
+</script>
+<script>
+	new ClipboardJS('.btn');
+
+</script>
+
+
+<!-- Theme JS files -->
+<script src="js/page.min.js"></script>
+<script src="js/blockui.min.js"></script>
+<!-- Theme JS files -->
+<script src="js/uniform.min.js"></script>
+<script src="js/switchery.min.js"></script>
+<script src="js/switch.min.js"></script>
+
+<script src="https://kit.fontawesome.com/058fed505d.js" crossorigin="anonymous"></script>
+<!-- /theme JS files -->
+
+<a id="de" href="http://omniupdate.sdccd.edu/10?skin=oucampus&amp;account=district&amp;site=sdccd&amp;action=de&amp;path=/students/class-search/search.html">92108</a></body>
+</html>
